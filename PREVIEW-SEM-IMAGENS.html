@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach House - Preview (Sem Imagens)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .alert {
+            background: linear-gradient(135deg, #1F6F8B, #3FB6A8);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .alert h1 {
+            margin: 0 0 15px 0;
+            font-size: 2rem;
+        }
+
+        .alert p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .instructions h2 {
+            color: #1F6F8B;
+            margin-top: 0;
+        }
+
+        .step {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3FB6A8;
+        }
+
+        .step h3 {
+            margin-top: 0;
+            color: #2F2F2F;
+        }
+
+        .file-list {
+            background: #2F2F2F;
+            color: #3FB6A8;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+
+        .file-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .file-list li {
+            padding: 5px 0;
+        }
+
+        .file-list li:before {
+            content: "📁 ";
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1F6F8B;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #3FB6A8;
+            transform: translateY(-2px);
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .preview-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .preview-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1F6F8B, #3FB6A8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .preview-card h4 {
+            color: #1F6F8B;
+            margin: 10px 0;
+        }
+
+        .preview-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer-preview {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">
+        <h1>🏖️ Beach House | Plenitur Flats</h1>
+        <p>⚠️ Este é um preview do site SEM as imagens reais</p>
+        <p>Para ver o site completo, adicione as fotos do flat na pasta <strong>images/</strong></p>
+    </div>
+
+    <div class="instructions">
+        <h2>📋 Como adicionar as imagens e ativar o site completo</h2>
+
+        <div class="step">
+            <h3>Passo 1: Prepare suas fotos</h3>
+            <p>Tire ou selecione 6 fotos do Beach House seguindo as orientações do arquivo <strong>INSTRUCOES-IMAGENS.md</strong></p>
+        </div>
+
+        <div class="step">
+            <h3>Passo 2: Renomeie os arquivos</h3>
+            <p>Renomeie suas fotos exatamente com estes nomes:</p>
+            <div class="file-list">
+                <ul>
+                    <li>hero-piscina.jpg</li>
+                    <li>piscina-vista-mar.jpg</li>
+                    <li>area-gourmet.jpg</li>
+                    <li>fachada.jpg</li>
+                    <li>flat-interno-1.jpg</li>
+                    <li>flat-interno-2.jpg</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>Passo 3: Coloque na pasta images/</h3>
+            <p>Copie todos os 6 arquivos para a pasta <strong>images/</strong> dentro do projeto</p>
+        </div>
+
+        <div class="step">
+            <h3>Passo 4: Abra o site!</h3>
+            <p>Clique duas vezes no arquivo <strong>index.html</strong> para ver o site completo com suas fotos</p>
+        </div>
+
+        <a href="index.html" class="btn">Abrir Site Principal (index.html)</a>
+        <a href="README.md" class="btn">Ler Documentação Completa</a>
+        <a href="INSTRUCOES-IMAGENS.md" class="btn">Guia de Imagens</a>
+    </div>
+
+    <div class="instructions">
+        <h2>👁️ Preview das Seções do Site</h2>
+        <p>Veja como ficará cada seção quando você adicionar as imagens:</p>
+
+        <div class="preview-grid">
+            <div class="preview-card">
+                <div class="preview-placeholder">🏊</div>
+                <h4>Hero Section</h4>
+                <p>Piscina rooftop com vista para o mar</p>
+                <p><strong>Arquivo:</strong> hero-piscina.jpg</p>
+            </div>
+
+            <div class="preview-card">
+                <div class="preview-placeholder">🌊</div>
+                <h4>Galeria Principal</h4>
+                <p>Vista panorâmica da piscina</p>
+                <p><strong>Arquivo:</strong> piscina-vista-mar.jpg</p>
+            </div>
+
+            <div class="preview-card">
+                <div class="preview-placeholder">☕</div>
+                <h4>Área Gourmet</h4>
+                <p>Espaço de café e refeições</p>
+                <p><strong>Arquivo:</strong> area-gourmet.jpg</p>
+            </div>
+
+            <div class="preview-card">
+                <div class="preview-placeholder">🏢</div>
+                <h4>Fachada</h4>
+                <p>Arquitetura moderna do edifício</p>
+                <p><strong>Arquivo:</strong> fachada.jpg</p>
+            </div>
+
+            <div class="preview-card">
+                <div class="preview-placeholder">🛋️</div>
+                <h4>Interior 1</h4>
+                <p>Sala e cozinha integradas</p>
+                <p><strong>Arquivo:</strong> flat-interno-1.jpg</p>
+            </div>
+
+            <div class="preview-card">
+                <div class="preview-placeholder">🛏️</div>
+                <h4>Interior 2</h4>
+                <p>Suite premium</p>
+                <p><strong>Arquivo:</strong> flat-interno-2.jpg</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h2>🚀 Próximos Passos</h2>
+        <p>Depois de adicionar as imagens:</p>
+        <ol>
+            <li>Teste o site em diferentes dispositivos (celular, tablet, desktop)</li>
+            <li>Verifique todos os links e botões do WhatsApp</li>
+            <li>Faça o deploy em uma plataforma de hospedagem (Netlify, Vercel, etc.)</li>
+            <li>Configure um domínio personalizado</li>
+            <li>Adicione Google Analytics para acompanhar visitas</li>
+        </ol>
+    </div>
+
+    <div class="instructions">
+        <h2>💡 Dica Profissional</h2>
+        <p>Se você ainda não tem as fotos e quer ver o site funcionando:</p>
+        <ol>
+            <li>Baixe fotos temporárias do <a href="https://unsplash.com" target="_blank">Unsplash.com</a></li>
+            <li>Busque por: "pool ocean view", "modern apartment", "beach building"</li>
+            <li>Renomeie e coloque na pasta images/</li>
+            <li>Depois substitua pelas fotos reais do Beach House</li>
+        </ol>
+    </div>
+
+    <div class="footer-preview">
+        <p><strong>Beach House by Plenitur Flats</strong></p>
+        <p>Hospedagem premium no litoral de João Pessoa</p>
+        <p>📲 WhatsApp: (83) 99409-9595</p>
+        <p>📸 Instagram: @plenitur_flats_joaopessoa</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Arquivos e pastas para ignorar no Git
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Imagens temporárias
+images/temp/
+images/backup/
+
+# Logs
+*.log
+
+# Node modules (se usar)
+node_modules/
+
+# Cache
+.cache/
+
+# Arquivos de configuração local
+config.local.js
+.env
