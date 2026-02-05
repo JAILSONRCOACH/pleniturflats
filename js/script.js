@@ -349,7 +349,111 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // ========================================
+    // LIGHTBOX - GALERIA DE FOTOS
+    // ========================================
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.querySelector('.lightbox-caption');
+    const lightboxCounter = document.querySelector('.lightbox-counter');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    const galeriaItems = document.querySelectorAll('.galeria-item');
+
+    let currentIndex = 0;
+    const images = [];
+
+    // Coletar todas as imagens da galeria
+    galeriaItems.forEach((item, index) => {
+        const img = item.querySelector('img');
+        const caption = item.querySelector('.galeria-caption').textContent;
+
+        images.push({
+            src: img.src,
+            alt: img.alt,
+            caption: caption
+        });
+
+        // Adicionar cursor pointer e evento de clique
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', () => {
+            openLightbox(index);
+        });
+    });
+
+    // Abrir lightbox
+    function openLightbox(index) {
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevenir scroll
+    }
+
+    // Fechar lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restaurar scroll
+    }
+
+    // Atualizar conteúdo do lightbox
+    function updateLightbox() {
+        const current = images[currentIndex];
+        lightboxImg.src = current.src;
+        lightboxImg.alt = current.alt;
+        lightboxCaption.textContent = current.caption;
+        lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+    }
+
+    // Próxima imagem
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateLightbox();
+    }
+
+    // Imagem anterior
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateLightbox();
+    }
+
+    // Event listeners
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeLightbox);
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextImage);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevImage);
+    }
+
+    // Fechar ao clicar fora da imagem
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // Navegação por teclado
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
+            closeLightbox();
+        } else if (e.key === 'ArrowRight') {
+            nextImage();
+        } else if (e.key === 'ArrowLeft') {
+            prevImage();
+        }
+    });
+
+    // ========================================
     // LOG FINAL
     // ========================================
-    console.log('✅ Landing Page Beach House carregada com sucesso!');
+    console.log('✅ Landing Page Beach Haus carregada com sucesso!');
+    console.log('📸 Lightbox da galeria ativado - Clique nas fotos para visualizar');
 });
