@@ -1,6 +1,6 @@
 # 📸 GUIA COMPLETO DE IMAGENS
 
-## Como adicionar as imagens do Beach House
+## Como adicionar as imagens do Beach Haus
 
 ---
 
@@ -174,13 +174,13 @@ Antes de publicar o site, verifique:
 - [ ] As fotos estão em alta qualidade?
 - [ ] Testou o site no celular?
 - [ ] Todas as imagens carregam rapidamente?
-- [ ] As fotos representam bem o Beach House?
+- [ ] As fotos representam bem o Beach Haus?
 
 ---
 
 ## 🎨 DICAS DE ESTILO FOTOGRÁFICO
 
-Para manter a identidade premium do Beach House:
+Para manter a identidade premium do Beach Haus:
 
 ### ✅ FAÇA:
 - Fotos com luz natural

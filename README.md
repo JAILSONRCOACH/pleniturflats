@@ -1,4 +1,4 @@
-# 🏖️ Beach House | Plenitur Flats
+# 🏖️ Beach Haus | Plenitur Flats
 
 Landing page premium para hospedagem de alto padrão em João Pessoa - PB
 
@@ -6,7 +6,7 @@ Landing page premium para hospedagem de alto padrão em João Pessoa - PB
 
 ## 📋 Sobre o Projeto
 
-Landing page profissional desenvolvida para **Beach House**, um flat premium gerenciado pela **Plenitur Flats**, localizado no litoral de João Pessoa.
+Landing page profissional desenvolvida para **Beach Haus**, um flat premium gerenciado pela **Plenitur Flats**, localizado no litoral de João Pessoa.
 
 **Características principais:**
 - Design premium e sofisticado

@@ -1,6 +1,6 @@
 # 🚀 GUIA RÁPIDO DE DEPLOY
 
-Como publicar o site Beach House na internet em 5 minutos
+Como publicar o site Beach Haus na internet em 5 minutos
 
 ---
 
@@ -192,7 +192,7 @@ Cole antes do `</head>` no index.html:
 - Rastreie conversões para anúncios
 
 ### 4. Google My Business
-- Cadastre o Beach House
+- Cadastre o Beach Haus
 - Adicione fotos
 - Vincule ao site
 - Incentive avaliações
@@ -249,13 +249,13 @@ Se for comprar domínio próprio:
 - Reels mostrando ambientes
 
 ### Facebook
-- Página: Beach House Plenitur Flats
+- Página: Beach Haus Plenitur Flats
 - Categoria: Aluguel por Temporada
 - Link do site
 - Fotos da piscina/ambientes
 
 ### Google Meu Negócio
-- Nome: Beach House - Plenitur Flats
+- Nome: Beach Haus - Plenitur Flats
 - Categoria: Apart-hotel
 - Endereço completo
 - Fotos
