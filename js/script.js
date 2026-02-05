@@ -451,9 +451,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Navegação por toque (swipe) em mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    if (lightbox) {
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - próxima imagem
+                nextImage();
+            } else {
+                // Swipe right - imagem anterior
+                prevImage();
+            }
+        }
+    }
+
     // ========================================
     // LOG FINAL
     // ========================================
     console.log('✅ Landing Page Beach Haus carregada com sucesso!');
     console.log('📸 Lightbox da galeria ativado - Clique nas fotos para visualizar');
+    console.log('👆 Navegação: Clique nos botões, teclas ← →, ou deslize em mobile');
 });

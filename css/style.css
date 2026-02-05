@@ -922,8 +922,8 @@ section {
 .lightbox-close,
 .lightbox-prev,
 .lightbox-next {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    background: rgba(255, 255, 255, 0.15);
     color: white;
     border: none;
     font-size: 2.5rem;
@@ -932,11 +932,13 @@ section {
     transition: var(--transition-fast);
     backdrop-filter: blur(10px);
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10001;
+    user-select: none;
 }
 
 .lightbox-close {
@@ -945,7 +947,7 @@ section {
 }
 
 .lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     transform: rotate(90deg);
 }
 
@@ -953,7 +955,9 @@ section {
 .lightbox-next {
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: bold;
 }
 
 .lightbox-prev {
@@ -966,8 +970,14 @@ section {
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-50%) scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.15);
+}
+
+.lightbox-prev:active,
+.lightbox-next:active {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.05);
 }
 
 @media (max-width: 768px) {
